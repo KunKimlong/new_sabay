@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: "Kdam Thmor Pro", sans-serif; */ /*khmer*/
+/* font-family: "Roboto", sans-serif; */ /*en*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+header{
+    background-color: black;
+    width: 100%; 
+    padding: 20px 0;
+}
+header .logo{
+    /* background-color: aquamarine; */
+    width: 85%;
+    margin: 0 auto;
+}
+/* navigation */
+nav{
+    width: 100%;
+    background-color: red;
+}
+nav ul{
+    width: 85%;
+    margin: 0 auto;
+    /* background-color: aqua; */
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    padding: 15px;
+}
+nav ul li a{
+    color:rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Kdam Thmor Pro", sans-serif; 
+}
+nav ul li:first-child{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+nav ul li:first-child a{
+    color: white;
+}
+nav ul li:hover a{
+    color: white;
+}
+
+/* main */
+
+.trending{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* background-color: aqua; */
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+.trending .all-news{
+    width: 68.5%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+.trending .all-news .top-news{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* background-color: aquamarine; */
+}
+.trending .all-news .top-news .left-news{
+    width:55%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.trending .all-news .top-news .right-news{
+    width: 45%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+.trending .all-news .top-news .news{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+    position: relative;
+    background:linear-gradient(60deg,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.3));
+}
+.trending .all-news .top-news .news img{
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+.trending .all-news .top-news .news .news_type{
+    width: fit-content;
+    padding: 0px 10px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.trending .all-news .top-news .news .news_type::before{
+    content: "";
+    position: absolute;
+    /* height: 100%; */
+    /* padding: 5px 0; */
+    width: 0;
+    height: 0;
+    right: -19px;
+    
+}
+.trending .all-news .top-news .news .news_type.blue{
+    background-color: rgb(0, 136, 255);
+}
+.trending .all-news .top-news .news .news_type.blue::before{
+    border-top: 15.5px solid transparent;
+    border-bottom: 15px solid rgb(0, 136, 255);
+    border-left: 10px solid rgb(0, 136, 255)    ;
+    border-right: 10px solid transparent;
+}
+.trending .all-news .top-news .news .news_type.pink{
+    background-color: pink;
+}
+.trending .all-news .top-news .news .news_type.pink::before{
+    border-top: 15.5px solid transparent;
+    border-bottom: 15px solid pink;
+    border-left: 10px solid pink    ;
+    border-right: 10px solid transparent;
+}
+
+
+.trending .all-news .top-news .news .title{
+    position: absolute;
+    left: 10px;
+    bottom: 70px;
+    font-size: 20px;
+    transition: 0.8s;
+}
+.trending .all-news .top-news .news .description{
+    position: absolute;
+    left: 10px;
+    bottom: -50px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.8s;
+    font-size: 15px;
+}
+.trending .all-news .top-news .news .date{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* background-color: black; */
+    width: 100%;
+    padding: 10px;
+    /* transition: 0.8s; */
+}
+.trending .all-news .top-news .news:hover{
+    background:linear-gradient(60deg,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5));
+}
+
+.trending .all-news .top-news .news:hover .title{
+    bottom: 130px;
+    color: red;
+}
+.trending .all-news .top-news .news:hover .description{
+    bottom: 70px;
+}
+
+
+
+
+.trending .all-ads{
+    width: 30%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trending .all-ads .ads{
+    width: 100%;
+    height: 49%;
+    background-color: aliceblue;
+}
